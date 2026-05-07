@@ -1,0 +1,30 @@
+<nav class="navbar">
+    <div class="logo" (click)="scrollTo('home')">
+        <span class="logo-brackets">&lt;</span>
+    </div>
+
+    <button class="hamburger" (click)="mobileOpen.set(!mobileOpen())">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <ul class="nav-links" [class.open]="mobileOpen()">
+        @for (item of navItems; track item.id) {
+            <li>
+                <a
+                    (click)="scrollTo(item.id)"
+                    [class.active]="activeSection() === item.id"
+                    class="nav-link">
+                    <span class="nav-icon">{{ item.icon }}</span>
+                    <span class="nav-label">{{ item.label }}</span>
+                </a>
+            </li>
+        }
+    </ul>
+
+    <div class="nav-footer">
+        <p class="nav-tagline">Entre em contato</p>
+        <p class="nav-sub">Estou aberto a novas oportunidades</p>
+    </div>
+</nav>

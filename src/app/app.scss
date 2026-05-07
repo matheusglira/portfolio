@@ -1,0 +1,19 @@
+.main-content{
+    margin-left: var(--nav-width);
+    padding: 2rem 3rem;
+    min-height: 100vh;
+}
+
+.two-col-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+@media (max-width: 1024px) {
+    .main-content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+}
