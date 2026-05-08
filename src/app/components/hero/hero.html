@@ -1,1 +1,53 @@
-<p>hero works!</p>
+<section class="hero">
+  <div class="hero-content">
+    <p class="greeting">Olá, me chamo</p>
+    <h1 class="name">Matheus <span class="highlight">Lira</span></h1>
+    <h2 class="role">
+      <span class="typed">{{ displayText() }}</span><span class="cursor">|</span>
+    </h2>
+    <p class="description">
+      Mais de 6 anos de experiência em desenvolvimento de sistemas, com foco em entregar
+      soluções eficientes, escaláveis e de alta qualidade.
+    </p>
+
+    <div class="cta-buttons">
+      <a href="#" class="btn btn-primary">
+        <span>⬇</span> Baixar Currículo
+      </a>
+      <a (click)="scrollTo('contato')" class="btn btn-outline">
+        <span>✉</span> Entrar em Contato
+      </a>
+    </div>
+
+    <div class="tech-icons">
+      @for (tech of techIcons; track tech.name) {
+        <div class="tech-badge" [class]="tech.class" [title]="tech.name">
+          {{ tech.letter }}
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="code-window">
+      <div class="window-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="window-title">&lt;/&gt;</span>
+      </div>
+      <div class="code-lines">
+        <div class="code-line"><span class="indent"></span><span class="kw">const </span> <span class="var">dev</span> = {{ '{' }}</div>
+        <div class="code-line"><span class="indent2"></span><span class="prop">name</span>: <span class="str">"Matheus Lira"</span>,</div>
+        <div class="code-line"><span class="indent2"></span><span class="prop">role</span>: <span class="str">"Fullstack"</span>,</div>
+        <div class="code-line"><span class="indent2"></span><span class="prop">exp</span>: <span class="num">6</span>,</div>
+        <div class="code-line"><span class="indent2"></span><span class="prop">stack</span>: [</div>
+        <div class="code-line"><span class="indent3"></span><span class="str">"Angular"</span>,</div>
+        <div class="code-line"><span class="indent3"></span><span class="str">"Java"</span>,</div>
+        <div class="code-line"><span class="indent3"></span><span class="str">"Spring Boot"</span></div>
+        <div class="code-line"><span class="indent2"></span>],</div>
+        <div class="code-line"><span class="indent"></span>{{ '}' }};</div>
+      </div>
+    </div>
+  </div>
+</section>
