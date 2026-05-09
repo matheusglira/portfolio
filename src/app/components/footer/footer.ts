@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  ano = new Date().getFullYear();
 }

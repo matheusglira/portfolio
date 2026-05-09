@@ -25,11 +25,10 @@ export class HeroComponent implements OnInit {
     this.typeWriter();
   }
 
-    scrollTo(id: string) {
+  scrollTo(id: string) {
     const element = document.getElementById(id);
     if(element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      this.activeSection.set(id);
     }
   }
 

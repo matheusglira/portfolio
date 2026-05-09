@@ -1,1 +1,13 @@
-<p>contato works!</p>
+<section class="contact-section">
+    <h2 class="section-title">
+        <span class="icon">✉</span>
+    </h2>
+    <div class="container-grid">
+        @for (c of contacts; track c.label) {
+            <a [href]="c.href" class="contact-item" target="_blank">
+                <span class="contact-icon">{{ c.icon }}</span>
+                <span class="contact-label">{{ c.label }}</span>
+            </a>
+        }
+    </div>
+</section>

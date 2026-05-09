@@ -1,0 +1,33 @@
+.contact-section { margin: 2rem 0;}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: all 0.25s;
+    font-size: 0.88rem;
+    font-weight: 500;
+
+    &:hover {
+        border-color: var(--accent-blue);
+        color: var(--accent-blue);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(79, 142, 247, 0.15);
+    }
+}
+
+.contact-icon {
+    font-size: 1.1rem;
+}

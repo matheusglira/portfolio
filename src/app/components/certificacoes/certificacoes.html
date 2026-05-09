@@ -1,1 +1,15 @@
-<p>certificacoes works!</p>
+<section class="certs-section">
+    <h2 class="section-title">
+        <span class="icon">🏆</span>
+    </h2>
+
+    <div class="certs-list">
+        @for (cert of certs; track cert.title) {
+            <div class="cert-item">
+                <div class="cert-icon" [class]="cert.color">{{ cert.icon }}</div>
+                <span class="cert-title">{{ cert.title }}</span>
+                <span class="cert-arrow">›</span>
+            </div>
+        }
+    </div>
+</section>
