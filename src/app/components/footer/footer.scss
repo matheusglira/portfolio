@@ -66,3 +66,9 @@
   .footer { margin-left: 0; padding: 1.5rem; }
   .footer-quote { display: none; }
 }
+
+:host-context([data-theme="light"]) .theme-toggle {
+  &::after { content: '☀️'; }
+  font-size: 0;
+  &::after { font-size: 1rem; }
+}

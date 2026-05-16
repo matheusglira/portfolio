@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -9,4 +9,6 @@ import { Component } from '@angular/core';
 export class FooterComponent {
 
   ano = new Date().getFullYear();
+  toggleTheme = output<void>();
+
 }

@@ -85,3 +85,15 @@ body {
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
 @keyframes pulse-dot { 0%, 100% { box-shadow: 0 0 0 0 rgba(79,142,247,0.4); } 70% { box-shadow: 0 0 0 8px rgba(79,142,247,0); } }
+
+[data-theme="light"] {
+  --bg-primary:    #f0f4f8;
+  --bg-secondary:  #e2e8f0;
+  --bg-card:       #ffffff;
+  --bg-card-hover: #f8fafc;
+  --text-primary:  #1a202c;
+  --text-secondary:#4a5568;
+  --text-muted:    #a0aec0;
+  --border:        #cbd5e0;
+  --border-accent: #a0aec0;
+}
